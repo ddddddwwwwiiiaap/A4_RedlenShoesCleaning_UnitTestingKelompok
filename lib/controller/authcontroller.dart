@@ -3,9 +3,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:redlenshoescleaning/model/usermodel.dart';
 
 class AuthController {
-  final FirebaseAuth auth = FirebaseAuth.instance;
-  final CollectionReference userCollection =
-      FirebaseFirestore.instance.collection('user');
+  // Comment code berikut untuk disconnect Collection 'user' ke Firebase DB
+  // final FirebaseAuth auth = FirebaseAuth.instance;
+  // final CollectionReference userCollection =
+  //     FirebaseFirestore.instance.collection('user');
+
+  // Add code Firebase Auth dan CollectionReference
+  final FirebaseAuth auth;
+  final CollectionReference userCollection;
+  AuthController(this.auth, this.userCollection);
 
   bool get success => false;
 

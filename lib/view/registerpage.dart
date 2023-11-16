@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:redlenshoescleaning/controller/authcontroller.dart';
 import 'package:redlenshoescleaning/model/usermodel.dart';
@@ -12,7 +14,11 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
   final _formKey = GlobalKey<FormState>();
-  final authController = AuthController();
+  // Add code FirebaseAuth dan CollectionReference
+  final authController = AuthController(
+    FirebaseAuth.instance,
+    FirebaseFirestore.instance.collection('user'),
+  );
   final _passwordController = TextEditingController();
   bool isPasswordVisible = false;
   bool isConfirmPasswordVisible = false;

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -12,7 +13,10 @@ class CreatePengeluaran extends StatefulWidget {
 }
 
 class _CreatePengeluaranState extends State<CreatePengeluaran> {
-  final pengeluaranController = PengeluaranController();
+  // Add code CollectionReference
+  final pengeluaranController = PengeluaranController(
+      FirebaseFirestore.instance.collection('pengeluaran')
+  );
   final _formkey = GlobalKey<FormState>();
 
   String? selectedDate;

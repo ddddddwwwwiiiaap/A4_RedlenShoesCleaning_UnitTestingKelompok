@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:redlenshoescleaning/controller/treatmentcontroller.dart';
@@ -20,7 +21,10 @@ class UpdateTreatment extends StatefulWidget {
 }
 
 class _UpdateTreatmentState extends State<UpdateTreatment> {
-  var treatmentController = TreatmentController();
+  // Add code CollectionReference
+  var treatmentController = TreatmentController(
+    FirebaseFirestore.instance.collection('treatment'),
+  );
 
   final _formkey = GlobalKey<FormState>();
 

@@ -14,7 +14,10 @@ class Pengeluaran extends StatefulWidget {
 }
 
 class _PengeluaranState extends State<Pengeluaran> {
-  var pc = PengeluaranController();
+  // Add code CollectionReference
+  var pc = PengeluaranController(
+      FirebaseFirestore.instance.collection('pengeluaran')
+  );
 
   @override
   void initState() {

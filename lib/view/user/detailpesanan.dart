@@ -29,7 +29,10 @@ class DetailPesanan extends StatefulWidget {
 }
 
 class _DetailPesananState extends State<DetailPesanan> {
-  var pesc = PesananController();
+  // Add code CollectionReference
+  var pesc = PesananController(
+    FirebaseFirestore.instance.collection('pesanan'),
+  );
 
   @override
   void initState() {

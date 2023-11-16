@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:redlenshoescleaning/view/user/pesananselesai.dart';
@@ -33,8 +34,14 @@ class PesananOnProcess extends StatefulWidget {
 }
 
 class _PesananOnProcessState extends State<PesananOnProcess> {
-  final AuthController authController = AuthController();
-  var pesc = PesananController();
+  // Add code CollectionReference
+  final AuthController authController = AuthController(
+    FirebaseAuth.instance,
+    FirebaseFirestore.instance.collection('user'),
+  );
+  var pesc = PesananController(
+    FirebaseFirestore.instance.collection('pesanan'),
+  );
 
   @override
   void initState() {

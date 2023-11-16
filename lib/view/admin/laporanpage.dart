@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:redlenshoescleaning/view/loginpage.dart';
@@ -14,9 +16,17 @@ class LaporanPage extends StatefulWidget {
 }
 
 class _LaporanPageState extends State<LaporanPage> {
-  final AuthController authController = AuthController();
-  final PesananController pesananController = PesananController();
-  final PengeluaranController pengeluaranController = PengeluaranController();
+  // Add code CollectionReference
+  final AuthController authController = AuthController(
+    FirebaseAuth.instance,
+    FirebaseFirestore.instance.collection('user'),
+  );
+  final PesananController pesananController = PesananController(
+    FirebaseFirestore.instance.collection('pesanan'),
+  );
+  final PengeluaranController pengeluaranController = PengeluaranController(
+    FirebaseFirestore.instance.collection('pengeluaran'),
+  );
 
   @override
   Widget build(BuildContext context) {

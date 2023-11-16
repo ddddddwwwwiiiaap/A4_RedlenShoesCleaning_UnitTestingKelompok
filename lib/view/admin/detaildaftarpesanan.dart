@@ -29,7 +29,10 @@ class DetailDataPesanan extends StatefulWidget {
 }
 
 class _DetailDataPesananState extends State<DetailDataPesanan> {
-  var pesc = PesananController();
+  // Add code CollectionReference
+  var pesc = PesananController(
+      FirebaseFirestore.instance.collection('pesanan')
+  );
 
   final _formkey = GlobalKey<FormState>();
   String? newstatus;

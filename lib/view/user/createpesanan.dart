@@ -15,7 +15,10 @@ class CreatePesanan extends StatefulWidget {
 
 class _CreatePesananState extends State<CreatePesanan> {
   final _formKey = GlobalKey<FormState>();
-  final pesananController = PesananController();
+  // Add code CollectionReference
+  final pesananController = PesananController(
+    FirebaseFirestore.instance.collection('pesanan'),
+  );
 
   String? selectedDate;
   String? namapemilik;

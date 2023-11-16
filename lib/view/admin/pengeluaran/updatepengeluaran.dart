@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -25,7 +26,10 @@ class UpdatePengeluaran extends StatefulWidget {
 }
 
 class _UpdatePengeluaranState extends State<UpdatePengeluaran> {
-  var pengeluaranController = PengeluaranController();
+  // Add code CollectionReference
+  var pengeluaranController = PengeluaranController(
+      FirebaseFirestore.instance.collection('pengeluaran')
+  );
 
   final _formkey = GlobalKey<FormState>();
 
