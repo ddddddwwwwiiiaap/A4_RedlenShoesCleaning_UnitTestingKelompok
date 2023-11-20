@@ -18,8 +18,8 @@ class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
   // Add code Firebase Auth dan CollectionReference
   final authController = AuthController(
-    FirebaseAuth.instance,
-    FirebaseFirestore.instance.collection('user'),
+    // FirebaseAuth.instance,
+    // FirebaseFirestore.instance.collection('user'),
   );
 
   String? email;

@@ -15,7 +15,7 @@ class Treatment extends StatefulWidget {
 class _TreatmentState extends State<Treatment> {
   // Add code CollectionReference
   var tc = TreatmentController(
-    FirebaseFirestore.instance.collection('treatment'),
+    // FirebaseFirestore.instance.collection('treatment'),
   );
 
   @override

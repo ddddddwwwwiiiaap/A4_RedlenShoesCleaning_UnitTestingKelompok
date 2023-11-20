@@ -14,7 +14,7 @@ class CreateTreatment extends StatefulWidget {
 class _CreateTreatmentState extends State<CreateTreatment> {
   // Add code CollectionReference
   var treatmentController = TreatmentController(
-      FirebaseFirestore.instance.collection('treatment')
+      // FirebaseFirestore.instance.collection('treatment')
   );
   final _formkey = GlobalKey<FormState>();
 

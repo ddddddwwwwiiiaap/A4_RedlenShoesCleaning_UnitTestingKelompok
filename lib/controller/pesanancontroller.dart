@@ -4,11 +4,11 @@ import 'package:redlenshoescleaning/model/pesananmodel.dart';
 
 class PesananController {
   // Comment code berikut untuk disconnect Collection 'pesanan' ke Firebase DB
-  // final pesananCollection = FirebaseFirestore.instance.collection('pesanan');
+  final pesananCollection = FirebaseFirestore.instance.collection('pesanan');
 
   // Add code CollectionReference
-  final CollectionReference pesananCollection;
-  PesananController(this.pesananCollection);
+  // final CollectionReference pesananCollection;
+  // PesananController(this.pesananCollection);
 
   final StreamController<List<DocumentSnapshot>> streamController =
       StreamController<List<DocumentSnapshot>>.broadcast();

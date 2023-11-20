@@ -23,7 +23,7 @@ class UpdateTreatment extends StatefulWidget {
 class _UpdateTreatmentState extends State<UpdateTreatment> {
   // Add code CollectionReference
   var treatmentController = TreatmentController(
-    FirebaseFirestore.instance.collection('treatment'),
+    // FirebaseFirestore.instance.collection('treatment'),
   );
 
   final _formkey = GlobalKey<FormState>();

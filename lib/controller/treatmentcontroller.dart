@@ -5,12 +5,12 @@ import 'package:redlenshoescleaning/model/treatmentmodel.dart';
 
 class TreatmentController {
   // Comment code berikut untuk disconnect Collection 'treatments' ke Firebase DB
-  // final treatmentCollection =
-  //     FirebaseFirestore.instance.collection('treatments');
+  final treatmentCollection =
+      FirebaseFirestore.instance.collection('treatments');
 
   // Add code CollectionReference
-  final CollectionReference treatmentCollection;
-  TreatmentController(this.treatmentCollection);
+  // final CollectionReference treatmentCollection;
+  // TreatmentController(this.treatmentCollection);
 
   final StreamController<List<DocumentSnapshot>> streamController =
       StreamController<List<DocumentSnapshot>>.broadcast();

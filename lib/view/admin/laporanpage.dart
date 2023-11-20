@@ -18,14 +18,14 @@ class LaporanPage extends StatefulWidget {
 class _LaporanPageState extends State<LaporanPage> {
   // Add code CollectionReference
   final AuthController authController = AuthController(
-    FirebaseAuth.instance,
-    FirebaseFirestore.instance.collection('user'),
+    // FirebaseAuth.instance,
+    // FirebaseFirestore.instance.collection('user'),
   );
   final PesananController pesananController = PesananController(
-    FirebaseFirestore.instance.collection('pesanan'),
+    // FirebaseFirestore.instance.collection('pesanan'),
   );
   final PengeluaranController pengeluaranController = PengeluaranController(
-    FirebaseFirestore.instance.collection('pengeluaran'),
+    // FirebaseFirestore.instance.collection('pengeluaran'),
   );
 
   @override

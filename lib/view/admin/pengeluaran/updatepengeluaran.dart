@@ -28,7 +28,7 @@ class UpdatePengeluaran extends StatefulWidget {
 class _UpdatePengeluaranState extends State<UpdatePengeluaran> {
   // Add code CollectionReference
   var pengeluaranController = PengeluaranController(
-      FirebaseFirestore.instance.collection('pengeluaran')
+      // FirebaseFirestore.instance.collection('pengeluaran')
   );
 
   final _formkey = GlobalKey<FormState>();

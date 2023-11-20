@@ -37,11 +37,11 @@ class PesananSelesai extends StatefulWidget {
 class _PesananSelesaiState extends State<PesananSelesai> {
   // Add code CollectionReference
   final AuthController authController = AuthController(
-    FirebaseAuth.instance,
-    FirebaseFirestore.instance.collection('user'),
+    // FirebaseAuth.instance,
+    // FirebaseFirestore.instance.collection('user'),
   );
   var pesc = PesananController(
-    FirebaseFirestore.instance.collection('pesanan'),
+    // FirebaseFirestore.instance.collection('pesanan'),
   );
 
   @override

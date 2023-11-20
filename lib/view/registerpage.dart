@@ -16,8 +16,8 @@ class _RegisterPageState extends State<RegisterPage> {
   final _formKey = GlobalKey<FormState>();
   // Add code FirebaseAuth dan CollectionReference
   final authController = AuthController(
-    FirebaseAuth.instance,
-    FirebaseFirestore.instance.collection('user'),
+    // FirebaseAuth.instance,
+    // FirebaseFirestore.instance.collection('user'),
   );
   final _passwordController = TextEditingController();
   bool isPasswordVisible = false;
