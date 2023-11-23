@@ -5,7 +5,7 @@ import 'package:integration_test/integration_test.dart';
 import 'package:redlenshoescleaning/view/admin/dashboardadmin.dart';
 import 'package:redlenshoescleaning/view/admin/treatment/createtreatment.dart';
 import 'package:redlenshoescleaning/view/admin/treatment/treatment.dart';
-import 'package:redlenshoescleaning/view/loginpage.dart'; // Sesuaikan dengan path file CreateTreatment.dart Anda
+import 'package:redlenshoescleaning/view/loginpage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

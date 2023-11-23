@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:redlenshoescleaning/view/admin/dashboardadmin.dart';
 import 'package:redlenshoescleaning/view/admin/treatment/treatment.dart';
-import 'package:redlenshoescleaning/view/loginpage.dart'; // Ganti path dengan lokasi file UpdateTreatment.dart
+import 'package:redlenshoescleaning/view/loginpage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:redlenshoescleaning/main.dart' as app;
-import 'package:redlenshoescleaning/view/user/dashboarduser.dart'; // Import your main app file
+import 'package:redlenshoescleaning/view/user/dashboarduser.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
