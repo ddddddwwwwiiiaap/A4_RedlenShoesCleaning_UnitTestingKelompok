@@ -194,7 +194,7 @@ class _PesananPageState extends State<PesananPage> {
                               builder: (context) => AlertDialog(
                                 backgroundColor: Colors.white,
                                 title: const Text(
-                                  'Selesaikan Pesanan',
+                                  'Selesai',
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                                 content: Column(
@@ -218,7 +218,7 @@ class _PesananPageState extends State<PesananPage> {
                                       Navigator.of(context).pop();
                                     },
                                     child: const Text(
-                                      'Selesaikan Pesanan',
+                                      'Selesai Pesanan',
                                       style: TextStyle(
                                         color: Colors.blue,
                                         fontWeight: FontWeight.bold,
