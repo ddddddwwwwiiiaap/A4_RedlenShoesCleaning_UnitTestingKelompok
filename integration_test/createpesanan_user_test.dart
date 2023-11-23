@@ -9,7 +9,7 @@ void main() async {
   await Firebase.initializeApp();
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   testWidgets(
-    'Test create pesanan widget',
+    'Create Pesanan User Test',
     (WidgetTester tester) async {
       final listViewKey = Key('your_listview_key');
       await tester.pumpWidget(
@@ -32,7 +32,7 @@ void main() async {
       await Future.delayed(const Duration(seconds: 2));
       await tester.enterText(find.byType(TextFormField).at(3), 'Nike');
       await tester.pumpAndSettle();
-      await tester.tap(find.byKey(const Key('dropdown')));
+      await tester.tap(find.byIcon(Icons.arrow_drop_down_circle_rounded));
       await tester.pumpAndSettle();
       await tester.tap(find.text('Treatment Lama'));
       await tester.pumpAndSettle();

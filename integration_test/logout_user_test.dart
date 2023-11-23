@@ -10,7 +10,7 @@ void main() async {
   await Firebase.initializeApp();
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   testWidgets(
-    'Login Test',
+    'Logout Test',
     (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
@@ -22,7 +22,8 @@ void main() async {
       await tester.enterText(find.byType(TextFormField).first, 'teama4@gmail.com');
       await Future.delayed(const Duration(seconds: 2));
       await tester.enterText(find.byType(TextFormField).last, '123456');
-      await tester.tap(find.byKey(const Key('login')));
+      await Future.delayed(const Duration(seconds: 2));
+      await tester.tap(find.byType(ElevatedButton));
       await tester.pumpAndSettle();
       await tester.pumpAndSettle(const Duration(seconds: 5));
       expect(find.byType(DashboardUser), findsOneWidget);

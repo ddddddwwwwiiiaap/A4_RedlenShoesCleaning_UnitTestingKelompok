@@ -12,7 +12,7 @@ void main() async {
   await Firebase.initializeApp();
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   testWidgets(
-    'CreateTreatment UI Test',
+    'Create Treatment Admin Test',
     (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
@@ -20,10 +20,11 @@ void main() async {
         ),
       );
       await Future.delayed(const Duration(seconds: 2));
-      await tester.enterText(find.byKey(const Key('emailField')), 'admin@admin.com');
+      await tester.enterText(find.byType(TextFormField).first, 'admin@admin.com');
       await Future.delayed(const Duration(seconds: 2));
-      await tester.enterText(find.byKey(const Key('passwordField')), '123456');
-      await tester.tap(find.byKey(const Key('login')));
+      await tester.enterText(find.byType(TextFormField).last, '123456');
+      await Future.delayed(const Duration(seconds: 2));
+      await tester.tap(find.byType(ElevatedButton));
       await tester.pumpAndSettle();
       await tester.pumpAndSettle(const Duration(seconds: 3));
       expect(find.byType(DashboardAdmin), findsOneWidget);
@@ -45,8 +46,9 @@ void main() async {
       await tester.enterText(find.byType(TextFormField).first, 'Contoh Jenis Treatment');
       await Future.delayed(const Duration(seconds: 2));
       await tester.enterText(find.byType(TextFormField).last, '50000');
+      await Future.delayed(const Duration(seconds: 5));
       await tester.tap(find.byType(ElevatedButton));
-      await tester.pumpAndSettle(const Duration(seconds: 2));
+      await tester.pumpAndSettle(const Duration(seconds: 5));
     },
   );
 }

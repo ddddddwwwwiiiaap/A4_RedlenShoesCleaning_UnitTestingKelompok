@@ -10,7 +10,7 @@ void main() async {
   await Firebase.initializeApp();
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   testWidgets(
-    'Login Test',
+    'View Status Pesanan User Test',
     (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
@@ -22,6 +22,7 @@ void main() async {
       await tester.enterText(find.byType(TextFormField).first, 'teama4@gmail.com');
       await Future.delayed(const Duration(seconds: 2));
       await tester.enterText(find.byType(TextFormField).last, '123456');
+      await Future.delayed(const Duration(seconds: 2));
       await tester.tap(find.byType(ElevatedButton));
       await tester.pump();
       await tester.pumpAndSettle(const Duration(seconds: 5));
@@ -47,8 +48,9 @@ void main() async {
       await tester.pumpAndSettle();
       await tester.tap(find.byIcon(Icons.logout));
       await tester.pumpAndSettle();
+      await Future.delayed(const Duration(seconds: 5));
       expect(find.byType(LoginPage), findsOneWidget);
-      await Future.delayed(const Duration(seconds: 3));
+      await Future.delayed(const Duration(seconds: 5));
     },
   );
 }

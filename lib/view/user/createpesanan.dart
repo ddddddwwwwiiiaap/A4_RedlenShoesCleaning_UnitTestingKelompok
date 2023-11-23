@@ -414,7 +414,7 @@ class _CreatePesananState extends State<CreatePesanan> {
                                         );
                                       },
                                       child: const Text(
-                                        'Tambahkan Pesanan',
+                                        'Tambah Pesanan',
                                         style: TextStyle(color: Colors.blue),
                                       ),
                                     ),

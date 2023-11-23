@@ -9,7 +9,7 @@ void main() async {
   await Firebase.initializeApp();
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   testWidgets(
-    'Register functionality test',
+    'Register Test',
     (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
@@ -26,7 +26,7 @@ void main() async {
       await tester.enterText(find.byType(TextFormField).at(3), '123456');
       await tester.tap(find.byType(ElevatedButton));
       await tester.pumpAndSettle();
-      await tester.pumpAndSettle(const Duration(seconds: 3));
+      await tester.pumpAndSettle(const Duration(seconds: 5));
       await tester.tap(find.text('OK'));
       await tester.pumpAndSettle();
       await tester.pumpAndSettle(const Duration(seconds: 3));
