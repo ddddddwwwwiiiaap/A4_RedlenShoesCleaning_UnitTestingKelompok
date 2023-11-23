@@ -19,7 +19,7 @@ void main() async {
       );
       await tester.pumpAndSettle();
       await Future.delayed(const Duration(seconds: 2));
-      await tester.enterText(find.byType(TextFormField).first, 'kelompok4@gmail.com');
+      await tester.enterText(find.byType(TextFormField).first, 'teama4@gmail.com');
       await Future.delayed(const Duration(seconds: 2));
       await tester.enterText(find.byType(TextFormField).last, '123456');
       await tester.tap(find.byKey(const Key('login')));
